@@ -15,8 +15,6 @@ function logList() {
     console.log(logs)
     const log_list = document.querySelector("#log_list");
     log_list.innerHTML += `<li class="list-group-item">naam: <strong>${naam_inp.value}</strong> <br> waarde: <strong>${value.value}</strong> </li>`
-
-    totalList(naam_inp.value)
 }
 function totalList(team){
     const groep = []
@@ -33,5 +31,6 @@ document.getElementById("btn_send").addEventListener("click", () =>{
         alert("vul de vakjes juist in")
     }else{
         logList()
+        totalList(naam_inp.value)
     }
 })
